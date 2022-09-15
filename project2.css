@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),transparent),
+    url(img2/Screen\ Shot\ 1401-01-15\ at\ 16.29.21.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0   5%;
+    /* position: relative; */
+}
+.container>nav{
+    width: 100%;
+   padding: 5px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.container>nav>img{
+    width: 120px;
+    cursor: pointer;
+}
+.container>nav>ul{
+    flex: 1;
+    text-align: right;
+}
+.container>nav>ul>li{
+   display: inline-block;
+   list-style: none;
+   margin: 12px 32px;
+}
+.container>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+.container>nav>ul>li>a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    transition: 0.4s;
+}
+.container>nav>ul>li>a:hover::after{
+    width: 50%;
+}
+.box1{
+    /* border: 2px solid rebeccapurple; */
+    position: absolute;
+    color: white;
+    bottom: 5%;
+}
+.box1>p{
+    font-size: 50px;
+    font-weight: 700;
+}
+.box1>h1{
+    font-size: 170px;
+    line-height: 200px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url(img2/back.png);
+    background-clip: text;
+    animation: anim 30s linear infinite;
+}
+@keyframes anim {
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.box1>h3{
+    font-size: 40px;
+    font-weight: 500px;
+}
+.box1>.box2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+.box1>.box2>a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+}
+.box1>.box2>a>span{
+    height: 20px;
+    margin-left: 5px;
+}
+.social{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.social>img:hover{
+    transform: translateY(-4px);
+}
+.social>img{
+    width: 30px;
+    margin: 20px 8px;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
